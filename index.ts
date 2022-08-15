@@ -10,7 +10,6 @@ let vaciarInputs = document.getElementById("vaciar");
 let productos: string[] = [];
 let precios: number[] = [];
 let sumaCompra: number = 0;
-let descuento = 0;
 //push para cargar elementos a un arreglo
 const agregarAlCarrito = () => {
   productos.push(producto.value);
