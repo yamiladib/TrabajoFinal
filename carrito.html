@@ -12,33 +12,32 @@
     />
     <link rel="stylesheet" type="text/css" href="styles.css" />
   </head>
-  <body>
+  <body class="contenedor">
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
       crossorigin="anonymous"
     ></script>
 
-    <h1>Carrito de Compras</h1>
-
-    <div class="contenedor">
+    <div class="bloque">
+      <h1>Carrito de Compras</h1>
       <input type="text" id="producto" placeholder="Ingrese el producto" />
       <input type="number" id="precio" placeholder="Ingrese el precio" />
-      <button id="btn-agregar">Agregar al Carrito</button>
-      <p>Detalle de compra:</p>
+      <button class="bloque" id="btn-agregar">Agregar al Carrito</button>
+      <h2>Detalle de compra:</h2>
       <ul id="detalle"></ul>
+      <h3>
+        Total Compra: $
+        <span id="total"></span>
+      </h3>
+      <button id="descuento">Hay Descuento</button>
+      <h4>
+        <span id="mensaje"> </span>
+      </h4>
+      <button class="bloque" id="vaciar">Vaciar Carrito</button>
+      <a class="link" href="index.html">Pagina Principal</a>
+      <h4>Calza2.Dgo</h4>
     </div>
-
-    <h3>
-      Total Compra: $
-      <span id="total"> </span>
-    </h3>
-    <button id="descuento">Hay Descuento</button>
-    <h4>
-      <span id="mensaje"> </span>
-    </h4>
-
-    <button id="vaciar">Vaciar Carrito</button>
     <script src="index.ts"></script>
   </body>
 </html>
