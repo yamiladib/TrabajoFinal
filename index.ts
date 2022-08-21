@@ -1,5 +1,5 @@
 //Carrito de compras
-//declaramos variables y arreglos.
+//declaro variables y arreglos.
 let producto = document.getElementById("producto");
 let precio = document.getElementById("precio");
 let agregar = document.getElementById("btn-agregar");
@@ -34,7 +34,7 @@ const vaciarDetalleCompra = () => {
   total?.innerHTML = "";
 };
 
-//le indeco a los botnones que disparen los eventos al hacer click.
+//le indico a los botnones que disparen los eventos al hacer click.
 agregar?.addEventListener("click", agregarAlCarrito);
 calcular?.addEventListener("click", calcularTotal);
 vaciarInputs?.addEventListener("click", vaciarDetalleCompra);
