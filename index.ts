@@ -1,15 +1,19 @@
 //Carrito de compras
-//declaro variables y arreglos.
+//declaramos variables y arreglos.
 let producto = document.getElementById("producto");
 let precio = document.getElementById("precio");
 let agregar = document.getElementById("btn-agregar");
 let calcular = document.getElementById("btn-calcular");
+let aplicarDescuento = document.getElementById("descuento");
 let detalle = document.getElementById("detalle");
 let total = document.getElementById("total");
 let vaciarInputs = document.getElementById("vaciar");
+let mensajeDescuento = document.getElementById("mensaje");
 let productos: string[] = [];
 let precios: number[] = [];
 let sumaCompra: number = 0;
+let descuento: number = 0;
+
 //push para cargar elementos a un arreglo
 const agregarAlCarrito = () => {
   productos.push(producto.value);
@@ -32,9 +36,23 @@ const calcularTotal = () => {
 const vaciarDetalleCompra = () => {
   detalle?.innerHTML = "";
   total?.innerHTML = "";
+  mensajeDescuento?.innerHTML = "";
+};
+const condicionDescuento = () => {
+  descuento = 0;
+  if (sumaCompra >= 2500) {
+    descuento = sumaCompra * 0.9;
+    mensajeDescuento?.innerHTML =
+      "¡Gracias por su compra!, usted recibio un descuento del 10%,EL TOTAL DE SU COMPRA ES:$" +
+      descuento;
+  } else {
+    descuento = sumaCompra;
+    mensajeDescuento?.innerHTML = "¡Gracias por su compra!, usted no tiende descuento";
+  }
 };
 
 //le indico a los botnones que disparen los eventos al hacer click.
 agregar?.addEventListener("click", agregarAlCarrito);
 calcular?.addEventListener("click", calcularTotal);
 vaciarInputs?.addEventListener("click", vaciarDetalleCompra);
+aplicarDescuento?.addEventListener("click", condicionDescuento);
