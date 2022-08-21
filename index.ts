@@ -22,23 +22,16 @@ const agregarAlCarrito = () => {
   //vaciar las entradas de valores
   producto.value = "";
   precio.value = "";
-  total?.innerHTML = "";
+
   sumaCompra = 0;
   for (let i: number = 0; i < precios.length; i++) {
     sumaCompra += Number(precios[i]);
   }
   total?.innerHTML = sumaCompra;
 };
-
-//creo funcion para vaciar el carrito de compras
-const vaciarDetalleCompra = () => {
-  detalle?.innerHTML = "";
-  total?.innerHTML = "";
-  mensajeDescuento?.innerHTML = "";
-};
 const condicionDescuento = () => {
   descuento = 0;
-  if (sumaCompra > 2500) {
+  if (sumaCompra >= 2500) {
     descuento = sumaCompra * 0.9;
     mensajeDescuento?.innerHTML =
       "¡Gracias por su compra!, tiene un descuento del 10%,EL TOTAL DE SU COMPRA ES:$" +
@@ -47,6 +40,12 @@ const condicionDescuento = () => {
     descuento = sumaCompra;
     mensajeDescuento?.innerHTML = "¡Gracias por su compra!,“Con su compra de $2500 puede acceder a un descuento.";
   }
+};
+//creo funcion para vaciar el carrito de compras
+const vaciarDetalleCompra = () => {
+  detalle?.innerHTML = "";
+  mensajeDescuento?.innerHTML = "";
+  total?.innerHTML = "";
 };
 
 //le indico a los botnones que disparen los eventos al hacer click.
