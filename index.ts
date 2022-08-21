@@ -3,7 +3,6 @@
 let producto = document.getElementById("producto");
 let precio = document.getElementById("precio");
 let agregar = document.getElementById("btn-agregar");
-let calcular = document.getElementById("btn-calcular");
 let aplicarDescuento = document.getElementById("descuento");
 let detalle = document.getElementById("detalle");
 let total = document.getElementById("total");
@@ -23,15 +22,14 @@ const agregarAlCarrito = () => {
   //vaciar las entradas de valores
   producto.value = "";
   precio.value = "";
-};
-//creo funciones para calcular la compra
-const calcularTotal = () => {
+  total?.innerHTML = "";
   sumaCompra = 0;
   for (let i: number = 0; i < precios.length; i++) {
     sumaCompra += Number(precios[i]);
   }
   total?.innerHTML = sumaCompra;
 };
+
 //creo funcion para vaciar el carrito de compras
 const vaciarDetalleCompra = () => {
   detalle?.innerHTML = "";
@@ -40,19 +38,18 @@ const vaciarDetalleCompra = () => {
 };
 const condicionDescuento = () => {
   descuento = 0;
-  if (sumaCompra >= 2500) {
+  if (sumaCompra > 2500) {
     descuento = sumaCompra * 0.9;
     mensajeDescuento?.innerHTML =
-      "¡Gracias por su compra!, usted recibio un descuento del 10%,EL TOTAL DE SU COMPRA ES:$" +
+      "¡Gracias por su compra!, tiene un descuento del 10%,EL TOTAL DE SU COMPRA ES:$" +
       descuento;
   } else {
     descuento = sumaCompra;
-    mensajeDescuento?.innerHTML = "¡Gracias por su compra!, usted no tiende descuento";
+    mensajeDescuento?.innerHTML = "¡Gracias por su compra!,“Con su compra de $2500 puede acceder a un descuento.";
   }
 };
 
 //le indico a los botnones que disparen los eventos al hacer click.
 agregar?.addEventListener("click", agregarAlCarrito);
-calcular?.addEventListener("click", calcularTotal);
 vaciarInputs?.addEventListener("click", vaciarDetalleCompra);
 aplicarDescuento?.addEventListener("click", condicionDescuento);
