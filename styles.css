@@ -5,9 +5,7 @@
   height: auto;
   padding: 20px;
   border: 2px;
-  flex-direction: row;
   justify-content: center;
-  align-items: center;
   background-image: url(fondo.jpg);
 }
 
@@ -18,7 +16,23 @@
 .linea {
   display: inline;
 }
+
 .imagen {
+  display: inline;
   width: 50px;
   height: 50px;
+}
+
+imagen1 {
+  display: inline;
+  width: 2%;
+  height: 2%;
+}
+
+.link {
+  text-decoration: white;
+}
+
+.menu {
+  align-items: flex-end;
 }

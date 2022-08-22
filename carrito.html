@@ -21,22 +21,30 @@
 
     <div class="bloque">
       <h1>Carrito de Compras</h1>
-      <input type="text" id="producto" placeholder="Ingrese el producto" />
-      <input type="number" id="precio" placeholder="Ingrese el precio" />
-      <button class="bloque" id="btn-agregar">Agregar al Carrito</button>
+      <input id="producto" type="text" placeholder="Ingrese el producto" />
+      <input id="precio" type="number" placeholder="Ingrese el precio" />
+      <button id="btn-agregar" type="button" class="btn btn-dark">
+        Agregar al Carrito
+      </button>
       <h2>Detalle de compra:</h2>
       <ul id="detalle"></ul>
       <h3>
         Total Compra: $
         <span id="total"></span>
       </h3>
-      <button id="descuento">Hay Descuento</button>
+      <button id="descuento" type="button" class="bloque btn btn-dark">
+        Hay Descuento
+      </button>
       <h4>
         <span id="mensaje"> </span>
       </h4>
-      <button class="bloque" id="vaciar">Vaciar Carrito</button>
-      <a class="link" href="index.html">Pagina Principal</a>
-      <h4>Calza2.Dgo</h4>
+      <button id="vaciar" type="button" class="bloque btn btn-dark">
+        Vaciar Carrito
+      </button>
+
+      <a href="index.html" type="button" class="btn btn-dark"
+        >Pagina Principal</a
+      >
     </div>
     <script src="index.ts"></script>
   </body>
