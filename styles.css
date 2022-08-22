@@ -1,5 +1,5 @@
 .fondo {
-  background: url(fondo.jpg);
+  background: url("fondo.jpg");
   display: flex;
   margin: 20px auto;
   text-align: center;
