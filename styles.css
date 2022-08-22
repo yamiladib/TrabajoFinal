@@ -1,35 +1,33 @@
 .fondo {
-  display: flex;
   background: url(fondo.jpg);
+  display: flex;
+  margin: 20px auto;
+  text-align: center;
 }
 
 .imagen1 {
-  display: line;
+  display: inline;
   width: 80%;
   height: 50%;
 }
-
-.imagen2 {
-  display: flex;
-  width: 50%;
-  height: 50%;
-}
-
-.imagen3 {
-  width: 50px;
-  height: 50px;
-}
-
 .input {
   background-image: url(fondo.jpg);
-  color: 10px blanco;
 }
 
 .titulo {
   font-size-adjust: 12px;
   color: white;
-  text-shadow: 1px 1px 4px black;
+  text-shadow: 0.5px 0.5px 4px black;
   text-align: center;
+  margin: 20px;
+}
+
+.titulo1 {
+  font-size-adjust: 12px;
+  color: white;
+  text-shadow: 1px 1px 4px black;
+  text-align: left;
+  margin: 10px;
 }
 
 .subtitulo {
@@ -37,6 +35,7 @@
   color: white;
   text-shadow: 1px 1px 4px black;
   text-align: left;
+  margin: 20px;
 }
 
 .parrafo {
@@ -44,4 +43,24 @@
   color: white;
   text-shadow: 1px 1px 4px black;
   text-align: justify;
+  margin: 20px;
+}
+.margen {
+  margin: 30px;
+  width: auto;
+}
+
+.pie {
+  font-size-adjust: 12px;
+  color: white;
+  text-shadow: 1px 1px 4px black;
+  text-align: right;
+  margin: 20px;
+}
+
+.lista1 {
+  list-style-image: url("instagram.png");
+}
+.lista2 {
+  list-style-image: url("whatsapp.png");
 }
